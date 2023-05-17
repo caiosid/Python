@@ -1,11 +1,21 @@
 numero = int(input("Digite um número inteiro: "))
-base = int(input("Escolha a base de conversão (1 - binário, 2 - octal, 3 - hexadecimal): "))
-
-if base == 1:
-    print("O número", numero, "em binário é:", bin(numero))
-elif base == 2:
-    print("O número", numero, "em octal é:", oct(numero))
-elif base == 3:
-    print("O número", numero, "em hexadecimal é:", hex(numero))
+print('''Escolha uma das bases para conversão:
+    [ 1 ] converter para BINÁRIO
+    [ 2 ] converter para OCTAL
+    [ 3 ] converter para HEXADECIMAL''')
+opção = int(input("Sua opção: "))
+if opção == 1:
+    print("{} convertido para BINÁRIO é igual a {}".format(numero, bin(numero)))
+elif opção == 2:
+    print("{} convertido para OCTAL é igul a {}".format(numero,oct(numero)))
+elif opção == 3:
+    print("{} convertido para HEXADECIMAL é igual a {}".format(numero, hex(numero)))
 else:
-    print("Opção inválida. Por favor, escolha uma opção válida (1, 2 ou 3).")
+    print("Opção inválida, tente novamente!")
+
+
+
+
+
+
+
