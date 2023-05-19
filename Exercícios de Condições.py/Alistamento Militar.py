@@ -1,16 +1,17 @@
 from datetime import date
-
-anoAtual = date.today().year
-
-anoNascimento = int(input("Digite o ano de nascimento: "))
-
-idade = anoAtual - anoNascimento
-
-if idade < 18:
-    anosFaltantes = 18 - idade
-    print("Você ainda vai se alistar ao serviço militar. Faltam {} anos".format(anosFaltantes))
-elif idade == 18:
-    print("É a hora de se alistar no serviço militar!")
-else:
-    anosPassados = idade - 18
-    print("Já passou o tempo do alistamento. Passaram-se {} anos.".format(anosPassados))
+atual = date.today().year
+nascimento = int(input("Ano de nascimento: "))
+idade = atual - nascimento
+print("Quem nasceu em {} tem {} em {}." .format(nascimento,idade,atual))
+if idade == 18:
+    print("Você tem que se alistar IMEDIATAMENTE!")
+elif idade < 18:
+    saldo = 18 - idade
+    print("Ainda faltam {} anos para o alistamento".format(saldo))
+    ano = atual + saldo
+    print("Seu alistamento será em {}".format(ano))
+elif idade > 18:
+     saldo = idade - 18
+     print("Você já deveria ter se alistado há {} anos".format(saldo))
+     ano = atual - saldo
+     print("Seu alistamento foi em {}".format(ano))
